@@ -15,4 +15,4 @@
 
 **Optimized production build**
 
-`$ npm build`
+`$ npm run build`
