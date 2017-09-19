@@ -1,0 +1,46 @@
+{
+  "name": "express-f2b-marmite",
+  "version": "1.0.0",
+  "description": "A front to back boilerplate setup with express and webpack",
+  "main": "server.js",
+  "scripts": {
+    "prod:build": "WEBPACK_BUILD_MODE=prod webpack --progress --optimize-minimize",
+    "prod:server": "NODE_ENV=production forever server.js",
+    "start": "npm run prod:build && npm run prod:server",
+    "dev": "WEBPACK_BUILD_MODE=dev NODE_ENV=development nodemon --inspect --debug server.js",
+    "test": "mocha"
+  },
+  "keywords": ["express", "webpack"],
+  "author": "Adel Mahjoub",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "forever": "^0.15.3",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "express": "^4.15.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "image-webpack-loader": "^3.4.2",
+    "img-loader": "^2.0.0",
+    "mocha": "^3.5.3",
+    "nodemon": "^1.12.1",
+    "postcss-loader": "^2.0.6",
+    "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-manifest-plugin": "^1.3.2"
+  }
+}
